@@ -5,8 +5,8 @@ import styles from '@/styles/Home.module.css'
 import favicon from "../public/favicon.ico"
 const inter = Inter({ subsets: ['latin'] })
 import Navbar from "../components/navbar"
-
-
+import Box from "../components/box"
+import Share from "../components/share"
 export default function Home() {
   return (
     <>
@@ -21,6 +21,30 @@ export default function Home() {
         <div className='navbar'>
           <Navbar></Navbar>
         </div>
+        <div className='main-text'>
+          <p className='t-1'>Unlock the Power of AI with krishna <span> ❤ </span></p>
+          <p className='t-2'>Stuck in your life, find clarity and peace of mind with #Krishna 🙏</p>
+          <p className='t-3'>🦚 Shri Krishna, Radhe Radhe 🦚</p>
+        </div>
+
+        <div className='main-input'>
+          <textarea rows="4" cols="50" required="required" type="text" name="query" placeholder='How I Can Find Inner Peace.'></textarea>
+          <button className='ask-btn'>Ask Krishna</button>
+          <div style={{ display: "flex", alignItems: "center", marginTop: "30px", justifyContent: "space-between" }}>
+            <p className='t-2'>Krishna Says : </p>
+            <div className='lang' style={{ display: "flex", justifyContent: "space-between", alignItems: "center" }}>
+              <p className='lang-hindi'>Hindi</p>
+              <p className='lang-eng on'>English</p>
+            </div>
+          </div>
+
+        </div>
+        <div className='output'>
+          <p>Are you looking for guidance in life? Allow the wisdom of Krishna to be your mentor! Our platform, Empowering Your Decision-Making with the Wisdom of Krishna-ai, provides you with a unique opportunity to connect with one of the greatest spiritual teachers of all time. Checkout these</p>
+        </div>
+        <Share></Share>
+        <div className='box-head' style={{ marginTop: "100px" }}>Express your love by taking a screenshot 🤳🏻 of Shri Krishna's 🦚 Gita Upadesh and tweeting 🐥 it.</div>
+        <Box></Box>
 
       </main>
       <style jsx>
@@ -33,8 +57,93 @@ export default function Home() {
           position: fixed;
           top: 0;
         }
+        .main-text{
+          margin-top:40px;
+        }
+        .main-text p{
+          line-height:40px;
+          text-align:center;
+          
+        }
+        .t-1{
+          color:#4B4B4B;
+          font-weight:10;
+          font-size:22px;
+        }
+        .t-3{
+          font-weight:5;
+          font-size:15px;
+        }
+        .t-2{
+          color:#2D2C2C;
+          font-size:24px;
+        }
+        textarea {
+          margin:0px auto;
+          resize: none;
+          border-radius:12px;
+          border:none;
+          transition:all 900ms;
+          padding:10px 15px;
+          font-size:20px;
+          width:100%;
+          // border:2px solid #FA00FF;
+        }
+        textarea:focus{
+          outline: none;
+          border:2px solid #FA00FF
+        }
+        .main-input{
+          width:700px;
+          min-width:380px;
+        }
+        .ask-btn{
+          text-align:center;
+          background:linear-gradient(45deg,#FA00FF,#031CFE);
+          width:100%;
+          padding:10px 20px;
+          color:white;
+          letter-spacing: 3px;
+          border-radius:8px;
+          margin-top:20px;
+        }
+        .lang-hindi, .lang-eng{
+          padding:5px;
+          color:white;
+          width:60px;
+          text-align:center;
+          font-size:15px;
+          background:linear-gradient(65deg,#FA00FF,#031CFE);
+          border-radius:4px;
+        }
+        .lang{
+          width:150px;
+          cursor:pointer;
+        }
+        .output{
+          width:700px;
+          min-width:380px;
+          padding:10px 15px;
+          margin-top:30px;
+          border-radius:12px;
+          font-size:18px;
+          background-color:white;
+        }
+
         `}
       </style>
     </>
   )
 }
+
+
+const data = [
+  {
+    id: "0",
+    title: "The Young 👦🏻, can turn guidance on how to live life."
+  },
+  {
+    id: "1",
+    title: "The Young 👦🏻, can turn guidance on how to live life."
+  },
+]

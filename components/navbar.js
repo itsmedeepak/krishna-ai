@@ -5,10 +5,9 @@ import { Bars3Icon, BellIcon, XMarkIcon } from '@heroicons/react/24/outline'
 import logo from "../public/logo.png"
 
 const navigation = [
-  { name: 'Dashboard', href: '#', current: true },
-  { name: 'Team', href: '#', current: false },
-  { name: 'Projects', href: '#', current: false },
-  { name: 'Calendar', href: '#', current: false },
+  { name: 'About', href: '#', current: true },
+  { name: 'Developers', href: '#', current: false },
+  { name: 'Contribute', href: '#', current: false },
 ]
 
 function classNames(...classes) {
@@ -17,11 +16,11 @@ function classNames(...classes) {
 
 export default function Example() {
   return (
-    <Disclosure as="nav" className="bg-white">
+    <Disclosure as="nav" className="bg-white drop-shadow-lg">
       {({ open }) => (
         <>
           <div className="mx-auto max-w-7xl px-2 sm:px-6 lg:px-8">
-            <div className="relative flex h-16 items-center justify-between">
+            <div className="relative flex h-20 items-center justify-between">
               <div className="absolute inset-y-0 left-0 flex items-center sm:hidden">
                 {/* Mobile menu button*/}
                 <Disclosure.Button className="inline-flex items-center justify-center rounded-md p-2 text-gray-400 hover:bg-gray-700 hover:text-white focus:outline-none focus:ring-2 focus:ring-inset focus:ring-white">
@@ -33,21 +32,16 @@ export default function Example() {
                   )}
                 </Disclosure.Button>
               </div>
-              <div className="flex flex-1 h-9 items-center justify-center sm:items-stretch sm:justify-start">
-                <div className="flex w-1/6 flex-shrink-0 items-center">
+              <div className="flex flex-1  items-center justify-center sm:items-stretch sm:justify-start">
+                <div className="flex w-56  flex-shrink-0 items-center  ">
                   <Image
-                    className="block h-8 w-auto  lg:hidden"
-                    src={logo}
-                    alt="krishna-ai logo"
-                  />
-                  <Image
-                    className="hidden h-8 w-auto lg:block"
+                    className="hidden h-12 w-auto lg:block"
                     src={logo}
                     alt="krishna-ai logo"
                   />
                 </div>
                 <div className="hidden sm:ml-6 sm:block">
-                  <div className="flex space-x-4">
+                  <div className="flex space-x-4 items-center h-56 w-auto sm:hidden">
                     {navigation.map((item) => (
                       <a
                         key={item.name}
